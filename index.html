@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Two Review Sections</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f2f2f2;
+      padding: 40px 0;
+    }
+
+    section {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      margin-bottom: 60px;
+    }
+
+    /* === First Swiper (Profile Cards) === */
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .image img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #7d2ae8;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .name-profession .name {
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .name-profession .profession {
+      font-size: 14px;
+      color: gray;
+    }
+
+    .rating {
+      margin-top: 10px;
+      color: #ffc107;
+    }
+
+    .button {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .button button {
+      background: #7d2ae8;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    /* === Second Swiper (Text Reviews) === */
+    .review-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 18px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Navigation buttons for both swipers */
+    .first-next, .first-prev, .second-next, .second-prev {
+      color: #7d2ae8;
+    }
+
+    .first-pagination .swiper-pagination-bullet,
+    .second-pagination .swiper-pagination-bullet {
+      background: #7d2ae8;
+    }
+
+    @media (max-width: 768px) {
+      .button {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .first-next, .first-prev, .second-next, .second-prev {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- === First Review Section: Profile Cards === -->
+  <section>
+    <div class="swiper firstSwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide card">
+          <div class="image"><img src="https://i.pravatar.cc/120?img=1" alt="Profile 1"/></div>
+          <div class="name-profession">
+            <span class="name">Alice</span>
+            <span class="profession">Frontend Developer</span>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+          </div>
+          <div class="button">
+            <button>About Me</button>
+            <button>Hire Me</button>
+          </div>
+        </div>
+
+        <div class="swiper-slide card">
+          <div class="image"><img src="https://i.pravatar.cc/120?img=2" alt="Profile 2"/></div>
+          <div class="name-profession">
+            <span class="name">Bob</span>
+            <span class="profession">Backend Developer</span>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+          </div>
+          <div class="button">
+            <button>About Me</button>
+            <button>Hire Me</button>
+          </div>
+        </div>
+
+
+        <div class="swiper-slide card">
+          <div class="image"><img src="https://i.pravatar.cc/120?img=2" alt="Profile 2"/></div>
+          <div class="name-profession">
+            <span class="name">Bob</span>
+            <span class="profession">Backend Developer</span>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+          </div>
+          <div class="button">
+            <button>About Me</button>
+            <button>Hire Me</button>
+          </div>
+        </div>
+
+
+
+        <div class="swiper-slide card">
+          <div class="image"><img src="https://i.pravatar.cc/120?img=2" alt="Profile 2"/></div>
+          <div class="name-profession">
+            <span class="name">Bob</span>
+            <span class="profession">Backend Developer</span>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+          </div>
+          <div class="button">
+            <button>About Me</button>
+            <button>Hire Me</button>
+          </div>
+        </div>
+
+        <div class="swiper-slide card">
+          <div class="image"><img src="https://i.pravatar.cc/120?img=3" alt="Profile 3"/></div>
+          <div class="name-profession">
+            <span class="name">Charlie</span>
+            <span class="profession">UI Designer</span>
+          </div>
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+          </div>
+          <div class="button">
+            <button>About Me</button>
+            <button>Hire Me</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Unique controls -->
+      <div class="swiper-button-next first-next"></div>
+      <div class="swiper-button-prev first-prev"></div>
+      <div class="swiper-pagination first-pagination"></div>
+    </div>
+  </section>
+
+  <!-- === Second Review Section: Text Reviews === -->
+  <section>
+    <div class="swiper secondSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide review-card">"Great service, fast delivery!" ⭐⭐⭐⭐⭐</div>
+        <div class="swiper-slide review-card">"Very helpful and professional!" ⭐⭐⭐⭐</div>
+        <div class="swiper-slide review-card">"Will work again with them." ⭐⭐⭐⭐⭐</div>
+        <div class="swiper-slide review-card">"Good communication throughout." ⭐⭐⭐⭐</div>
+      </div>
+
+      <!-- Unique controls -->
+      <div class="swiper-button-next second-next"></div>
+      <div class="swiper-button-prev second-prev"></div>
+      <div class="swiper-pagination second-pagination"></div>
+    </div>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    // First Swiper
+    var swiper1 = new Swiper(".firstSwiper", {
+      loop: true,
+      spaceBetween: 30,
+      grabCursor: true,
+      navigation: {
+        nextEl: ".first-next",
+        prevEl: ".first-prev",
+      },
+      pagination: {
+        el: ".first-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      }
+    });
+
+    // Second Swiper
+    var swiper2 = new Swiper(".secondSwiper", {
+      loop: true,
+      spaceBetween: 30,
+      grabCursor: true,
+      navigation: {
+        nextEl: ".second-next",
+        prevEl: ".second-prev",
+      },
+      pagination: {
+        el: ".second-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      }
+    });
+  </script>
+
+</body>
+</html>
